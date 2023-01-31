@@ -8,6 +8,7 @@ export const Conteiner = styled.div`
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 export const DataInput = styled.div`
@@ -20,6 +21,7 @@ export const CategoriaInput = styled.div`
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    width: 150px;
 `;
 
 export const TitleInput = styled.div`
@@ -34,7 +36,17 @@ export const ValueInput = styled.div`
     font-weight: bold;
 `;
 
-export const Button = styled.div`
-  position: relative;
-  top: 20px;
+export const Button = styled.button`
+    width: 20%;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+    &:hover {
+        background-color: blue;
+        color: white;
+    }
 `;

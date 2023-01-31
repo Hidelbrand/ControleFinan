@@ -1,7 +1,23 @@
 import * as C from './styles'
+import { Item } from '../../types/Item'
+
+type Props = {
+    onAdd: (item: Item) => void;
+}
 
 
-export const InputArea = () => {
+export const InputArea = ({onAdd}: Props) => {
+
+    const handleAddEvent = () => {
+        let newItem: Item = {
+            date: new Date(2021, 9, 27),
+            category: 'food',
+            title: 'Item de teste',
+            value: 250.00
+        }
+        onAdd(newItem);
+    }
+
     return (
         <C.Conteiner>
             <C.DataInput>
@@ -25,7 +41,7 @@ export const InputArea = () => {
                 <input type="" />
             </C.ValueInput>
             <C.Button>
-                <input type="button" value={'Adicionar'}/>
+                Adicionar
             </C.Button>
         </C.Conteiner>
     )
